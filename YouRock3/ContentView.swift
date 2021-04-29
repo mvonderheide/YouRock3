@@ -7,15 +7,36 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+struct Student: Hashable {
+    var id = UUID()
+    var name = String()
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+var student1 = Student(name: "Kevin")
+var student2 = Student(name: "Smadar")
+var student3 = Student(name: "Dimitri")
+var course = [student1, student2, student3]
+
+struct ContentView: View {
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                ForEach(course, id: \.self) { s in
+                    NavigationLink(
+                        destination: TeamMemberView(student: s),
+                        label: {
+                            Text(s.name)
+                        })
+                }
+            }
+        }
+    }
+    
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

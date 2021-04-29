@@ -11,6 +11,8 @@
 		84CAA250263A0CFB0021FF0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA24F263A0CFB0021FF0B /* ContentView.swift */; };
 		84CAA252263A0CFE0021FF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CAA251263A0CFE0021FF0B /* Assets.xcassets */; };
 		84CAA255263A0CFE0021FF0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CAA254263A0CFE0021FF0B /* Preview Assets.xcassets */; };
+		84CAA25E263A11150021FF0B /* TeamMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA25D263A11150021FF0B /* TeamMemberView.swift */; };
+		84CAA261263A13580021FF0B /* Data1N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA260263A13580021FF0B /* Data1N.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		84CAA251263A0CFE0021FF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CAA254263A0CFE0021FF0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84CAA256263A0CFE0021FF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CAA25D263A11150021FF0B /* TeamMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberView.swift; sourceTree = "<group>"; };
+		84CAA260263A13580021FF0B /* Data1N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data1N.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				84CAA24D263A0CFB0021FF0B /* YouRock3App.swift */,
 				84CAA24F263A0CFB0021FF0B /* ContentView.swift */,
+				84CAA260263A13580021FF0B /* Data1N.swift */,
+				84CAA25D263A11150021FF0B /* TeamMemberView.swift */,
 				84CAA251263A0CFE0021FF0B /* Assets.xcassets */,
 				84CAA256263A0CFE0021FF0B /* Info.plist */,
 				84CAA253263A0CFE0021FF0B /* Preview Content */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CAA261263A13580021FF0B /* Data1N.swift in Sources */,
+				84CAA25E263A11150021FF0B /* TeamMemberView.swift in Sources */,
 				84CAA250263A0CFB0021FF0B /* ContentView.swift in Sources */,
 				84CAA24E263A0CFB0021FF0B /* YouRock3App.swift in Sources */,
 			);
