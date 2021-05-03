@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TeamMemberView: View {
     // @State var student = Student()
-    @State var coursePassed = [Student]()
+    @State var rosterPassed = [Student]()
     var body: some View {
         
-        ForEach(coursePassed, id: \.self) { s in
+        ForEach(rosterPassed, id: \.self) { s in
             VStack {
                 HStack {
                     Text(s.firstName)

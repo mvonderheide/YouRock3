@@ -7,20 +7,53 @@
 
 import SwiftUI
 
+//Data Model: Teachers have Classes, Classes have rosters of Students, and Students have a number of rocks that are awarded
+
+struct Teacher : Hashable {
+    var id = UUID()
+    var prefix : String
+    var firstName : String
+    var lastName : String
+    var classes : [Class]
+}
+
+struct Class: Hashable {
+    var id = UUID()
+    var period : String
+    var className : String
+    var roster : [Student]
+}
+
 struct Student: Hashable {
     var id = UUID()
     var firstName = String()
     var lastName = String()
     var numRocks = 0
-    
 }
 
+struct SELCategory: Hashable {
+    var id = UUID()
+    var categoryName : String
+    var subCategories : [String]
+}
 
-var student1 = Student(firstName: "Kevin", lastName : "McQuown", numRocks : 73)
-var student2 = Student(firstName: "Smadar", lastName : "Bergman", numRocks : 62)
-var student3 = Student(firstName: "Dimitri", lastName : "Villalobos", numRocks : 48)
+var teacher1 : Teacher = Teacher(prefix: "Mr.", firstName: "Matthew", lastName: "Vonderheide", classes: [class1, class2])
 
-var course = [student1, student2, student3]
+var class1 : Class = Class(period: "1", className: "App Dev with Swift", roster: [student1, student2, student3, student4, student5, student6] )
+
+var class2 : Class = Class(period: "2", className: "Exploring Computer Science", roster: [] )
+
+var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 6)
+
+var student2 : Student = Student(firstName: "Dimitri", lastName: "Villalobos", numRocks: 5)
+
+var student3 : Student = Student(firstName: "Smadar", lastName: "Bergman", numRocks: 4)
+
+var student4 : Student = Student(firstName: "Kevin", lastName: "McQuown", numRocks: 8)
+
+var student5 : Student = Student(firstName: "Daniel", lastName: "Bang", numRocks: 7)
+
+var student6 : Student = Student(firstName: "Mia", lastName: "Harris", numRocks: 9)
 
 struct ContentView: View {
     
@@ -28,7 +61,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationLink(
-                    destination: TeamMemberView(coursePassed : course),
+                    destination: TeamMemberView(rosterPassed : teacher1.classes[0].roster),
                     label: {
                         Text("View Student Data")
                             .padding(5)
@@ -38,14 +71,7 @@ struct ContentView: View {
                             .padding(5)
                             
                     })
-                
-//                ForEach(course, id: \.self) { s in
-//                    NavigationLink(
-//                        destination: TeamMemberView(student: s),
-//                        label: {
-//                            Text(s.name)
-//                        })
-//                }
+            
             }
         }
     }
