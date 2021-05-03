@@ -14,12 +14,7 @@ struct Student: Hashable {
     var numRocks = 0
     
 }
-//struct Student: Hashable {
-//    var id = UUID()
-//    var name = String()
-//    var lastName = String()
-//    var numRocks = 0
-//}
+
 
 var student1 = Student(firstName: "Kevin", lastName : "McQuown", numRocks : 73)
 var student2 = Student(firstName: "Smadar", lastName : "Bergman", numRocks : 62)
