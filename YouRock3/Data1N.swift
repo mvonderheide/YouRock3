@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct Data1N: View {
+    @State var student = Student()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            
+            
+        }
+        
     }
 }
 
