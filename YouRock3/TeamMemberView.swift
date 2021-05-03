@@ -30,8 +30,6 @@ struct TeamMemberView: View {
     }
 }
 
-
-
 struct TeamMemberView_Previews: PreviewProvider {
     static var previews: some View {
         TeamMemberView()
