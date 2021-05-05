@@ -13,6 +13,9 @@
 		84CAA255263A0CFE0021FF0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CAA254263A0CFE0021FF0B /* Preview Assets.xcassets */; };
 		84CAA25E263A11150021FF0B /* TeamMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA25D263A11150021FF0B /* TeamMemberView.swift */; };
 		84CAA261263A13580021FF0B /* Data1N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA260263A13580021FF0B /* Data1N.swift */; };
+		84CAA281264203B00021FF0B /* WelcomeScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA280264203B00021FF0B /* WelcomeScreen2.swift */; };
+		84CAA284264212B40021FF0B /* Period1N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA283264212B40021FF0B /* Period1N.swift */; };
+		84CAA28B2642172B0021FF0B /* ChooseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAA28A2642172B0021FF0B /* ChooseCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		84CAA256263A0CFE0021FF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CAA25D263A11150021FF0B /* TeamMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberView.swift; sourceTree = "<group>"; };
 		84CAA260263A13580021FF0B /* Data1N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data1N.swift; sourceTree = "<group>"; };
+		84CAA280264203B00021FF0B /* WelcomeScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen2.swift; sourceTree = "<group>"; };
+		84CAA283264212B40021FF0B /* Period1N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period1N.swift; sourceTree = "<group>"; };
+		84CAA28A2642172B0021FF0B /* ChooseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				84CAA24D263A0CFB0021FF0B /* YouRock3App.swift */,
+				84CAA280264203B00021FF0B /* WelcomeScreen2.swift */,
 				84CAA24F263A0CFB0021FF0B /* ContentView.swift */,
 				84CAA260263A13580021FF0B /* Data1N.swift */,
+				84CAA283264212B40021FF0B /* Period1N.swift */,
+				84CAA28A2642172B0021FF0B /* ChooseCategory.swift */,
 				84CAA25D263A11150021FF0B /* TeamMemberView.swift */,
 				84CAA251263A0CFE0021FF0B /* Assets.xcassets */,
 				84CAA256263A0CFE0021FF0B /* Info.plist */,
@@ -145,8 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CAA261263A13580021FF0B /* Data1N.swift in Sources */,
+				84CAA284264212B40021FF0B /* Period1N.swift in Sources */,
 				84CAA25E263A11150021FF0B /* TeamMemberView.swift in Sources */,
 				84CAA250263A0CFB0021FF0B /* ContentView.swift in Sources */,
+				84CAA28B2642172B0021FF0B /* ChooseCategory.swift in Sources */,
+				84CAA281264203B00021FF0B /* WelcomeScreen2.swift in Sources */,
 				84CAA24E263A0CFB0021FF0B /* YouRock3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

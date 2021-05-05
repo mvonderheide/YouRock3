@@ -61,7 +61,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 NavigationLink(
-                    destination: TeamMemberView(rosterPassed : teacher1.classes[0].roster),
+                    destination: WelcomeScreen2( rosterWelcomeScreen2 : teacher1.classes[0].roster),
                     label: {
                         Text("View Student Data")
                             .padding(5)
