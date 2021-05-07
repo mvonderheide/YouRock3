@@ -22,7 +22,7 @@ struct WelcomeScreen2: View {
             HStack{
                 NavigationLink(
                     //                    destination: Period1N(rosterData1N : rosterWelcomeScreen2),
-                    destination: Period1N(rosterPeriod1N : rosterWelcomeScreen2),
+                    destination: Period1N(rosterPeriod1N : $rosterWelcomeScreen2),
                     label: {
                         Text("Recognize a Student")
                             .padding(5)

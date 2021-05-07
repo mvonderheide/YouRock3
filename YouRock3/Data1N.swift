@@ -16,6 +16,7 @@ struct Data1N: View {
     let cornerRad: CGFloat = 4
     
     @State var rosterData1N = [Student]()
+    @State var sortedData = [Student]()
     
     var body: some View {
         VStack {
@@ -44,7 +45,7 @@ struct Data1N: View {
             }
             
             
-            ForEach(rosterData1N, id:\.self) { s in
+            ForEach(sortedData, id:\.self) { s in
                 HStack{
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRad)
@@ -68,6 +69,10 @@ struct Data1N: View {
                 
             }
             
+        }.onAppear() {
+            sortedData = rosterData1N.sorted(by: { (s1, s2) -> Bool in
+                s1.numRocks > s2.numRocks
+            })
         }
         
     }

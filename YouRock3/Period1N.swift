@@ -10,13 +10,12 @@ import SwiftUI
 struct Period1N: View {
     
     
-    @State var rosterPeriod1N = [Student]()
+    @Binding var rosterPeriod1N : [Student]
     @State var selectedStudent = Student()
-    @State var selectedStudentName = " "
-    @State var selectedIndex = 0
-    //@State var names : [String] = [ ]
+    @State var selectedStudentName = ""
+    @State var names = [String]()
     
-    var names = ["Daniel Bang", "Smadar Bergman", "Mia Harris", "Kevin McQuown", "Miguel Sanchez", "Dimitri Villalobos"]
+//    var names = ["Daniel Bang", "Smadar Bergman", "Mia Harris", "Kevin McQuown", "Miguel Sanchez", "Dimitri Villalobos"]
     
     var body: some View {
         
@@ -34,21 +33,25 @@ struct Period1N: View {
                 .padding()
             Text("Choose a Student")
             
-            Picker(selection: $selectedIndex, label: Text("")) {
-                ForEach(0 ..< names.count) {
-                    Text(self.names[$0])
+            Picker(selection: $selectedStudentName, label: Text("")) {
+                ForEach(names, id: \.self) { name in
+                    Text(name)
                 }
             }
             
-            if selectedIndex < names.count {
                 NavigationLink(
                     destination: ChooseCategory(),
                     label: {
-                        Text("\(names[selectedIndex])")
+                        Text("\(selectedStudentName)")
                     })
-            }
             
+            Button(action: {
+                let idx = getIndex()
+                rosterPeriod1N[idx].numRocks += 1
             
+            }, label: {
+                Text("Add Rock for \(selectedStudentName)")
+            })
             
             Image("rockWall1")
                 .resizable()
@@ -64,6 +67,7 @@ struct Period1N: View {
         }
         //This doesn't seem to populate the names roster in time for the picker to use it
         .onAppear{
+            names.removeAll() // initialize array to empty
             for s in rosterPeriod1N {
                 names.append(s.firstName +  " " + s.lastName)
                 
@@ -85,15 +89,18 @@ struct Period1N: View {
             }
         }
     }
-}
-
-
-
-struct Period1N_Previews: PreviewProvider {
-    static var previews: some View {
-        Period1N()
+    func getIndex() -> Int {
+        return names.firstIndex(of: selectedStudentName)!
     }
 }
+
+
+//
+//struct Period1N_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Period1N()
+//    }
+//}
 //onAppear doesn't seem to populate the names array by the time we get to this picker
 //            Picker(selection: $selectedIndex, label: Text("")) {
 //                ForEach(names, id: \.self) {
